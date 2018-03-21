@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px solid;
+    text-align: center;
+}
+input[type="text"] {
+    background-color: blueviolet;
+}
+input {
+    border: 3px solid;
+}
+a {
+    font-size: 40px;
+    border-width: 3px; 
+}
+a:hover {
+    color: brown;
+}
+p:hover {
+    color: brown;
+}
+.abc {
+    display: inline-block;
+}
+.nav {
+    background-color: #800080;
+}
+
+.nav a {
+    color: white;
+}
+
+.nav a:visited {
+    color: white;
+}

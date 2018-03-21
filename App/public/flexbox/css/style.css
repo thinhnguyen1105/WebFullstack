@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.header {
+    background-color: #0000ff;
+}
+
+.nav {
+    background-color: #800080;
+}
+
+.main {
+    background: #ffd700;
+    float: left;
+    width: 75%;
+    height: 350px;
+    padding: 10px 0;
+    
+    
+}
+
+.aside {
+    float: right;
+    background: #808080;
+    width: 25%;
+    height: 370px;
+    
+    
+}
+
+
+.footer {
+    
+    background-color: #00ffff;
+    display: inline-block;
+}
+
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}

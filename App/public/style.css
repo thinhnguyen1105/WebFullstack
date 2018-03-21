@@ -1,0 +1,62 @@
+@font-face {
+    src: url(fonts/Averta-Black.otf);
+    font-family: Averta-Black;
+
+}
+@font-face {
+    src: url(fonts/Averta.otf);
+    font-family: Averta;
+
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+#right{
+    text-align: right;
+}
+
+#info{
+    margin: auto;
+    font-size: 19px;
+    line-height: 62px;
+    font-family: Averta-Black;
+}
+
+#img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#black{
+    font-family: Averta-Black;
+}
+
+#regular{
+    font-family: Averta;
+}
+
+#end{
+    color:white;
+}
+
+#footer{
+    position: absolute;
+    
+}
+
+.contact-me-icons a {
+    border:none;
+    color: #66CEFF;
+    font-size: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .contact-me-icons a:hover {
+    border:none;
+    color: #333333;
+    opacity: .6;
+  }

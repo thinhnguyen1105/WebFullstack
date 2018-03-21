@@ -1,0 +1,48 @@
+<div class="container">
+
+    <h1 class="text-center">{{question.questionContent}}</h1>
+    <form action="/onclick/{{question.id}}/yes" method="post">
+        <div class="row text-center" id="btn-answer">
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-danger btn-lg" name="btn_yesno" value="no">
+                    <span class="glyphicon glyphicon-thumbs-down">
+                        <span>Sai/Khong/Trai</span>
+                    </span>
+                </button>
+            </div>
+    </form>
+
+    <form action="/onclick/{{question.id}}/no" method="post">
+        <div class="col-md-6">
+            <button type="summit" class="btn btn-primary btn-lg" name="btn_yesno" value="yes">
+                <span class="glyphicon glyphicon-thumbs-up">
+                    <span>Dung/Co/Phai</span>
+                </span>
+            </button>
+        </div>
+        </div>
+    </form>
+
+
+    <form action="/" method="post">
+
+        <div class="row text-center" id="btn-swap">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-default" name="btn_yesno" value="hetquavote">Ket qua vote</button>
+                <button type="submit" class="btn btn-default" name="btn_yesno" value="cauhoikhac">Cau hoi khac</button>
+            </div>
+        </div>
+    </form>
+
+
+
+    {{!--
+    <button class="yes">
+        <a href="/onclick/{{question.id}}/yes"> Yes </a>
+    </button>
+    <button class="no">
+        <a href="/onclick/{{question.id}}/no"> No </a>
+    </button> --}} {{!--
+    <span>Yes: {{question.yes}}</span>
+    <span>No: {{question.no}}</span> --}}
+</div>
