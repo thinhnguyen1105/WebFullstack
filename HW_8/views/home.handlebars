@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        
+    
+        .main p{
+            padding-top: 5%;
+            font-size: 30px;   
+        }
+        .vote{
+            padding-top: 10%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <div class="main">
+            <h2>Question</h2>
+            <p id="content"> {{questionContent.content}} </p>
+            <div class="row vote">
+                <div class="col-xs-6">
+                    {{!-- <a href="/vote/{{questionContent.id}}/no"> --}}
+                    <button class="btn btn-danger" id="false"><span class="glyphicon glyphicon-thumbs-down"></span> Sai / Không / Trái </button>
+                    {{!-- </a> --}}
+                    
+                </div>
+                 <div class="col-xs-6">
+                    {{!-- <a href="/vote/{{questionContent.id}}/yes"> --}}
+                    <button class="btn btn-primary" id="true"><span class="glyphicon glyphicon-thumbs-up"></span> Đúng / Có / Phải</button>
+                    {{!-- </a> --}}
+                </div>
+            </div>
+            {{!-- <a href="/question/info/{{questionContent.id}}"> --}}
+            <button class="btn btn-default" id="result">Xem kết quả vote</button>
+            {{!-- </a> --}}
+            {{!-- <a href="/question" > --}}<button class="btn btn-default" onclick="Ajax()">Câu hỏi khác</button>
+            {{!-- </a> --}}
+            
+        </div>
+    </div>
+
+    <script>
+        let $false = $('#false');
+        let $true = $('#true');
+        let $result = $('#result');
+        let content = null;
+        $false.click(()=>{
+            if(content==null){
+                location.href = "/vote/{{questionContent.id}}/no";
+            }
+            else{
+                location.href = '/vote/' + content._id + '/no';
+            }
+        })
+        $true.click(()=>{
+            if(content==null){
+                location.href = "/vote/{{questionContent.id}}/yes";
+            }
+            else{
+                location.href = '/vote/' + content._id + '/yes';
+            }
+        })
+        $result.click(()=>{
+            console.log('ok');
+            if(content==null){
+                location.href = "/question/info/{{questionContent.id}}";
+            }
+            else{
+                location.href = '/question/info/' + content._id;
+            }
+        })
+
+        function Ajax(){
+            $.ajax({
+                url: '/',
+                method: 'post',
+                success: (res)=>{
+                $('#content').html(res.content.question);
+                content = res.content;
+                }
+            });
+        };
+
+    </script>
+
+    {{!-- <form action="/answer/{{question.id}}" method="post">
+        <input type="submit" name="yes" > Yes
+        <input type="submit" name="no" > No
+    </form> --}}
+    
+</body>
+</html>

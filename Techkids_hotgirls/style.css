@@ -27,7 +27,7 @@ ul.nav.navbar-nav.navbar-right {
 
 .short img{
 	width: 200px;
-	height: 207px;
+	height: auto;
 	margin-left: -15px;
 }
 .cover:hover{
@@ -50,7 +50,7 @@ ul.nav.navbar-nav.navbar-right {
 }
 .long img{
 	width: 200px;
-	height: 300px;
+	height: auto;
 	margin-left: -15px;
 }
 
@@ -82,24 +82,20 @@ ul.nav.navbar-nav.navbar-right {
 .footer{
 	height: 100px;
 }
-form.navbar-form.navbar-left {
-    margin-left: 200px;
-}
+
 .fas.fa-search{
-	position: absolute;
-	left: 31%;
-	top: 38%;
+	margin-left: 20px;
 	color: #eeeeee;
 }
 
 .nav.navbar-nav.navbar-right{
 	margin-right: 200px;
-	margin-top: 10px;
+	margin-top: 20px;
 }
 .camera{
 	width: 32px;
 	height: 34px;
-	background: #1367bd;
+	background: #4294e6;
 	text-align: center;
 }
 .fas.fa-camera{
@@ -112,11 +108,9 @@ form.navbar-form.navbar-left {
 }
 .title{
 	position: absolute;
-	left: 39%;
+	left:50%;
 	top: 0%;
-	font-size: 20px;
-	color: #38cce4bd;
-	font-weight: bold;
+	
 }
 
 #logo{
@@ -124,4 +118,19 @@ form.navbar-form.navbar-left {
 	width: auto;
 	max-width: 100px;
 	max-height: 100px;
+	margin-left: 140px;
 	}
+
+.auto-image{
+	height: auto;
+	width: auto;
+	max-width: 300px;
+	max-height: 600px;
+}
+
+#vote{
+	position: absolute;
+	padding: 7px;
+	margin-left: 10px;
+
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+        .box{
+            text-align: left;
+            padding-top: 10px;
+            margin: 0 auto;
+            width: 80%;
+        }
+        button{
+            display: block;
+            width:  60px;
+            height: 40px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        span{
+            opacity: 0.7;
+        }
+        #character{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1> Hãy hỏi một câu hỏi có đáp án có/không </h1>
+
+       <div class="form-group"></div>
+            <form method="post" action="/ask">   
+                <textarea id="questionInput" class="form-control" name="question" rows="10" cols="100" maxlength="200"> </textarea>
+                <span> Còn <span id="character">200</span>/200 kí tự </span><br>
+                <button type="submit" class="btn btn-primary"> Send </button>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(document).ready(()=>{
+        $("form").submit(()=>{
+            $.ajax({
+                url: 'testajax',
+                method: 'POST',
+                data: {
+                    tien: 50
+                },
+                success: (res)=>{
+                    console.log(res);
+                }
+            });
+        });
+    })
+</script>
+</html>
+

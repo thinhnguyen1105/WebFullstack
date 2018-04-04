@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+</head>
+<body>
+        <div class="info container">
+                <h1>Question</h1>
+                <h2> {{questionInfo.content}} </h2>
+                <h3> {{questionInfo.sum}} vote </h3>
+                <div class="result">
+                        <div class="no" style="width:{{questionInfo.no}}%;"> {{questionInfo.no}}% No </div> {{!-- có trong bootstrap --}}
+                        <div class="yes" style="width:{{questionInfo.yes}}%;" >{{questionInfo.yes}}% Yes </div>
+                </div>
+                <a href="/"><button type="submit" class="btn btn-success">Câu hỏi khác</button></a>
+        </div>
+</body>
+</html>

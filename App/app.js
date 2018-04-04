@@ -60,12 +60,19 @@ const home = require('./app_modules/home.js');
 // const onClick = require ('./app_modules/onClick');
 const question = require('./app_modules/question');
 const ask = require('./app_modules/ask'); 
+const mongoose = require("mongoose");
 
 
 let app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.engine('handlebars', handlebar({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
+
+mongoose.connect("mongodb://localhost/quyetde",(err)=>{
+    if(err) console.log(err);
+    console.log("Database connected ")
+
+})
 
 var data = [...fileController.readFileSync('data.json')];
 
