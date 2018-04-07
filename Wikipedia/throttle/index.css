@@ -1,0 +1,27 @@
+.scrollbar {
+    background-color: rgb(135, 200, 30);
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    left: 40%;
+    overflow-y: scroll;
+   
+}
+#style-2{
+    top: 50%;
+}
+.force-overflow {
+    min-height: 2000px;
+}
+
+#number1{
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    z-index: 1;
+}
+#number2{
+    position: fixed;
+    top: 70%;
+    left: 50%;
+}
